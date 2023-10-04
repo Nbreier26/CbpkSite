@@ -1,5 +1,5 @@
 export default {
-    name: 'certificados',
+    name: 'certificado',
     type: 'document',
     title: 'Certificados',
     fields: [
