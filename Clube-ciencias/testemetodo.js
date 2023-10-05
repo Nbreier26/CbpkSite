@@ -13,14 +13,18 @@ fetch(apiUrl)
     return response.json();
   })
   .then(data => {
+    console.log(data)
     const result = data.result;
-
+    
     result.forEach(metodo => {
+        if(metodo.ativo){
         const quadrado1 = document.getElementById('quadrado1');
         const p = document.createElement('p');
         p.classList.add('vant-txt');
         p.innerText = metodo.descricao;
         quadrado1.appendChild(p);
+        console.log(metodo)
+        }
     });
     
   })
