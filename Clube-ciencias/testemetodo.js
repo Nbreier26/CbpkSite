@@ -13,7 +13,6 @@ fetch(apiUrl)
     return response.json();
   })
   .then(data => {
-    console.log(data)
     const result = data.result;
     
     result.forEach(metodo => {
@@ -23,7 +22,6 @@ fetch(apiUrl)
         p.classList.add('vant-txt');
         p.innerText = metodo.descricao;
         quadrado1.appendChild(p);
-        console.log(metodo)
         }
     });
     
