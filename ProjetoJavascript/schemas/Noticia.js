@@ -4,6 +4,11 @@ export default {
   title: 'Notícia', // Título do documento
   fields: [
     {
+      name: 'ativo',
+      type: 'boolean',
+      title: 'Ativo'
+    },
+    {
       name: 'titulo',
       type: 'string',
       title: 'Título'

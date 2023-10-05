@@ -4,6 +4,11 @@ export default {
     title: 'Pré-Clube',
     fields: [
       {
+        name: 'ativo',
+        type: 'boolean',
+        title: 'Ativo'
+      },
+      {
         name: 'descricao',
         type: 'string',
         title: 'Descrição'
