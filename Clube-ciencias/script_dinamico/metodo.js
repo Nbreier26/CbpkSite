@@ -8,23 +8,23 @@ fetch(apiUrl_metodo)
     if (!response.ok) {
       throw new Error(`Erro na requisição: ${response.statusText}`);
     }
-    
+
     // Converte a resposta para JSON
     return response.json();
   })
   .then(data => {
     const result = data.result;
-    
+
     result.forEach(metodo => {
-        if(metodo.ativo){
+      if (metodo.ativo) {
         const quadrado1 = document.getElementById('quadrado1');
         const p = document.createElement('p');
         p.classList.add('vant-txt');
         p.innerText = metodo.descricao;
         quadrado1.appendChild(p);
-        }
+      }
     });
-    
+
   })
   .catch(error => {
     // Trata erros que podem ocorrer durante a requisição
