@@ -10,7 +10,7 @@ export default {
       },
       {
         name: 'descricao',
-        type: 'string',
+        type: 'text',
         title: 'Descrição'
       }
     ]
