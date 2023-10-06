@@ -1,8 +1,7 @@
 
-const apiUrl_metodo = 'https://ywf90txg.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27metodo%27%5D';
+const apiUrl_premios = 'https://ywf90txg.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27premios%27%5D'
 
-
-fetch(apiUrl_metodo)
+fetch(apiUrl_premios)
   .then(response => {
     // Verifica se a resposta da requisição foi bem-sucedida (código 200)
     if (!response.ok) {
@@ -15,13 +14,13 @@ fetch(apiUrl_metodo)
   .then(data => {
     const result = data.result;
     
-    result.forEach(metodo => {
-        if(metodo.ativo){
-        const quadrado1 = document.getElementById('quadrado1');
+    result.forEach(premios => {
+        if(premios.ativo){
+        const quadrado3 = document.getElementById('quadrado3');
         const p = document.createElement('p');
         p.classList.add('vant-txt');
-        p.innerText = metodo.descricao;
-        quadrado1.appendChild(p);
+        p.innerText = premios.descricao;
+        quadrado3.insertBefore(p, quadrado3.children[1]);
         }
     });
     
