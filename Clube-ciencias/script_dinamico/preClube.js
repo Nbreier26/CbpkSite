@@ -1,0 +1,1 @@
+const apiUrl_preClube = 'https://ywf90txg.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22preClube%22%5D'
