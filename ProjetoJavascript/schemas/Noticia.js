@@ -29,9 +29,9 @@ export default {
       title: 'Imagem'
     },
     {
-      name: 'imagem-mobile',
+      name: 'imagemMobile',
       type: 'image',
-      title: 'Imagem-mobile'
+      title: 'Imagem Mobile'
     },
     {
       name: 'dataPublicacao',
