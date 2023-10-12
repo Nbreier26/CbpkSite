@@ -29,6 +29,11 @@ export default {
       title: 'Imagem'
     },
     {
+      name: 'imagem-mobile',
+      type: 'image',
+      title: 'Imagem-mobile'
+    },
+    {
       name: 'dataPublicacao',
       type: 'date',
       title: 'Data de Publicação'
