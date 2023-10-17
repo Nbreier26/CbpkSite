@@ -10,12 +10,12 @@ export default {
         fields: [
             {
                 name: 'inicio',
-                type: 'time',
+                type: 'string',
                 title: 'Inicio'
             },
             {
                 name: 'fim',
-                type: 'time',
+                type: 'string',
                 title: 'Fim'
             }
         ]
@@ -27,12 +27,12 @@ export default {
         fields: [
             {
                 name: 'inicio',
-                type: 'time',
+                type: 'string',
                 title: 'Inicio'
             },
             {
                 name: 'fim',
-                type: 'time',
+                type: 'string',
                 title: 'Fim'
             }
         ]
