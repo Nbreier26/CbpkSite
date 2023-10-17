@@ -4,8 +4,9 @@ import certificado from './certificado'
 import premio from './premio'
 import listaPremios from './listaPremios'
 import preClub from './preClub'
+import equipe from './Equipe'
 
-export const schemaTypes = [metodos, dados, certificado, premio, listaPremios, preClub]
+export const schemaTypes = [metodos, dados, certificado, premio, listaPremios, preClub, equipe]
 
 
 
