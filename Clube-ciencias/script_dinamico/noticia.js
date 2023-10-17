@@ -36,6 +36,8 @@ fetch(apiUrl_noticia)
                 descricao.innerText = noticia.conteudo;
                 imgDesk.src = noticia.imageUrl
                 imgMobile.src = noticia.imageMobileUrl
+                imgDesk.classList.add('imgDesk')
+                imgMobile.classList.add('imgMobile')
                 
                 txt.appendChild(titulo);
                 txt.appendChild(subtitulo);
