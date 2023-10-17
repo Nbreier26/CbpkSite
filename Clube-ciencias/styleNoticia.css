@@ -1,0 +1,14 @@
+
+
+.imgMobile {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .imgDesk {
+        display: none; 
+    }
+    .imgMobile {
+        display: block; 
+    }
+}

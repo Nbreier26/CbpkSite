@@ -38,6 +38,8 @@ fetch(apiUrl_noticia)
                 imgMobile.src = noticia.imageMobileUrl
                 imgDesk.classList.add('imgDesk')
                 imgMobile.classList.add('imgMobile')
+                imgDesk.classList.add('img-noticia')
+                imgMobile.classList.add('img-noticia')
                 
                 txt.appendChild(titulo);
                 txt.appendChild(subtitulo);
