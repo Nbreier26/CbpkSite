@@ -23,14 +23,14 @@ fetch(apiUrl_duvidas)
               divCard.className = 'card card-body';
               
               divCollapse.className = "collapse";
-              divCollapse.id = "collapseExample" + indice;  // Usando o índice para gerar um ID único
+              divCollapse.id = "collapseExample" + indice;  
           
               const botao = document.createElement("button");
               
               botao.className = "campo-freq";
               botao.type = "button";
               botao.setAttribute("data-bs-toggle", "collapse");
-              botao.setAttribute("data-bs-target", "#collapseExample" + indice);  // Usando o índice no target
+              botao.setAttribute("data-bs-target", "#collapseExample" + indice);  
               botao.setAttribute("aria-expanded", "false");
               botao.setAttribute("aria-controls", "collapseExample" + indice);  // Usando o índice no controle
               botao.textContent = duvidas.pergunta;
