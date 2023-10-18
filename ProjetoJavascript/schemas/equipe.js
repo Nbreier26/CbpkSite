@@ -9,11 +9,6 @@ export default {
         title: 'Ativo'
       },
       {
-        name: 'ativo',
-        type: 'boolean',
-        title: 'Ativo'
-      },
-      {
         name: 'nome',
         type: 'string',
         title: 'Nome'

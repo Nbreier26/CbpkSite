@@ -4,6 +4,11 @@ export default {
     title: 'Duvidas',
     fields: [
       {
+        name: 'ativo',
+        type: 'boolean',
+        title: 'Ativo'
+      },
+      {
         name: 'pergunta',
         type: 'string',
         title: 'Pergunta'
