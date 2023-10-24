@@ -48,8 +48,6 @@ fetch(apiUrl_noticia)
                 noti.appendChild(imgDesk);
                 noti.appendChild(imgMobile);
                 document.body.appendChild(noti)
-                console.log(imgDesk)
-
             }
         });
 
