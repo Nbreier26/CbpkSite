@@ -10,8 +10,9 @@
         "Turno2 Hora2 Hora2"
         "DIa Idade2 Idade2"
         "Dia2 Idade3 Idade3";
-    width: 560px;
     height: 394px;
+    max-width: 560px;
+    max-height: auto;
     border-radius: 10px;
     padding-bottom: 25px;
 
@@ -193,7 +194,7 @@
         "dia2_clube serie2_clube serie2_clube"
         "dia3_clube serie3_clube serie3_clube"
         "dia4_clube serie4_clube serie4_clube";
-    width: 560px;
+    max-width: 560px;
     height: 518px;
     padding-bottom: 25px;
 
