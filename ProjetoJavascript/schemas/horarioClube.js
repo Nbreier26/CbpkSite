@@ -39,7 +39,7 @@ export default {
       },
       {
         name: 'diasDaSemana',
-        type: 'array',
+        type: 'boolean',
         title: 'Dias da semana',
         of: [{type: 'string'}],
         options: {
