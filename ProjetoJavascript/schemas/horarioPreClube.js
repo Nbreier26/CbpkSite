@@ -1,7 +1,7 @@
 export default {
     name: 'horarios',
     type: 'document',
-    title: 'Horários',
+    title: 'Horários Pré-Clube',
     fields: [
       {
         name: 'turnoManha',
@@ -41,7 +41,10 @@ export default {
         name: 'diasDaSemana',
         type: 'array',
         title: 'Dias da semana',
-        of: [{type: 'string'}]
+        of: [{type: 'string'}],
+        options: {
+          "Dias": ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira']
+        }
       },
       {
         name: 'turma',

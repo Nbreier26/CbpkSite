@@ -1,4 +1,4 @@
-const apiUrl_horarios = 'https://ywf90txg.api.sanity.io/v2021-03-25/data/query/production?query=*%5B_type+%3D%3D+%22horarios%22%5D%7B%0A++%0A%7D&perspective=previewDrafts';
+const apiUrl_horarios = 'https://ywf90txg.api.sanity.io/v2021-03-25/data/query/production?query=*%5B_type+%3D%3D+%27horarioPreClube%27%5D%7B%0A++%0A%7D&perspective=previewDrafts';
 
 fetch(apiUrl_horarios)
     .then(response => {
@@ -14,7 +14,7 @@ fetch(apiUrl_horarios)
         result.forEach(horario => {
             // Verifique se a turma é a desejada (substitua 'SuaTurma' pelo nome da turma desejada)
             if (horario.turma === 'SuaTurma') {
-                // const quadrado3 = document.getElementById('');
+                const quadrado3 = document.getElementById('');
 
                 // Iterar sobre os dias da semana e seus horários
                 horario.diasDaSemana.forEach(diaDaSemana => {
