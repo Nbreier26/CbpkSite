@@ -1,5 +1,5 @@
 export default {
-    name: 'horarios',
+    name: 'horarioPreClube',
     type: 'document',
     title: 'Horários Pré-Clube',
     fields: [
