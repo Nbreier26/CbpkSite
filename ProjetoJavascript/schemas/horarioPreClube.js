@@ -7,53 +7,53 @@ export default {
       name: 'turnoManha',
       type: 'object',
       title: 'Turno Manhã',
-      fields: [
-          {
-              name: 'inicio',
-              type: 'string',
-              title: 'Inicio'
-          },
-          {
-              name: 'fim',
-              type: 'string',
-              title: 'Fim'
-          }
-      ]
+      fields: {
+        inicio: {
+          type: 'string',
+          title: 'Inicio'
+        },
+        fim: {
+          type: 'string',
+          title: 'Fim'
+        }
+      }
     },
     {
       name: 'turnoTarde',
       type: 'object',
       title: 'Turno Tarde',
-      fields: [
-          {
-              name: 'inicio',
+      fields: {
+        inicio: {
+          type: 'string',
+          title: 'Inicio'
+        },
+        fim: {
+          type: 'string',
+          title: 'Fim'
+        }
+      }
+    },
+    {
+      name: 'diasTurma',
+      type: 'array',
+      title: 'Dias e Turmas',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'diaDaSemana',
               type: 'string',
-              title: 'Inicio'
-          },
-          {
-              name: 'fim',
+              title: 'Dia da Semana'
+            },
+            {
+              name: 'turma',
               type: 'string',
-              title: 'Fim'
-          }
+              title: 'Turma'
+            }
+          ]
+        }
       ]
-    },
-    {
-      name: 'diasDaSemana',
-      type: 'array',
-      title: 'Dias da semana',
-      of: [{type: 'string'}],
-      options: {
-        "Dias": ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira']
-      }
-    },
-    {
-      name: 'turma',
-      type: 'array',
-      title: 'Turmas',
-      of: [{type: 'string'}],
-      options: {
-        "Turmas": []
-      }
     }
   ]
 }
