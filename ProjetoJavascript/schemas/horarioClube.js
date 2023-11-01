@@ -39,7 +39,7 @@ export default {
       },
       {
         name: 'diasDaSemana',
-        type: 'boolean',
+        type: 'array',
         title: 'Dias da semana',
         of: [{type: 'string'}],
         options: {
@@ -48,8 +48,12 @@ export default {
       },
       {
         name: 'turma',
-        type: 'string',
-        title: 'Turma'
+        type: 'array',
+        title: 'Turmas',
+        of: [{type: 'string'}],
+        options: {
+          "Turmas": []
+        }
       }
     ]
   }
