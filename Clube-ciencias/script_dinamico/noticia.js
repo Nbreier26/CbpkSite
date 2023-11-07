@@ -1,4 +1,4 @@
-const apiUrl_noticia = 'https://ywf90txg.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27noticia%27%5D%7B%0A++%22imageUrl%22%3A+imagem.asset-%3Eurl%2C%0A++%22imageMobileUrl%22%3A+imagemMobile.asset-%3Eurl%2C+%0A++...%0A%7D'
+const apiUrl_noticia = 'https://ywf90txg.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27noticia%27+%26%26+ativo+%3D%3D+true+%5D'
 
 fetch(apiUrl_noticia)
     .then(response => {
@@ -14,8 +14,7 @@ fetch(apiUrl_noticia)
         const result = data.result;
 
         result.forEach(noticia => {
-            if (noticia.ativo) {
-                
+            
                 const noti = document.createElement('div');
                 const txt = document.createElement('div');
                 const titulo = document.createElement('p');
@@ -48,7 +47,7 @@ fetch(apiUrl_noticia)
                 noti.appendChild(imgDesk);
                 noti.appendChild(imgMobile);
                 document.body.appendChild(noti)
-            }
+            
         });
 
     })
