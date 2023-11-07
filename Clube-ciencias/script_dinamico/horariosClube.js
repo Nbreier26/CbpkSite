@@ -8,11 +8,10 @@ fetch(apiUrl_horarios)
         return response.json();
     })
     .then(data => {
-        
         const result = data.result;
-        
+        console.log(result);
+
         result.forEach(horario => {
-            
             const hora1 = document.getElementById('hora_clube');
             const p1 = document.createElement('p');
             const inicio1 = horario.turnoManha.inicio;
@@ -29,8 +28,12 @@ fetch(apiUrl_horarios)
             p2.innerText = modeloHora2;
             hora2.appendChild(p2);
 
-            horario.
-        
+            const horariodia = horario.diasDaSemana;
+
+            horariodia.forEach((diaSemana, indice) => {
+                
+                
+            });
         });
     })
     .catch(error => {

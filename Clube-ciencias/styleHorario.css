@@ -256,7 +256,7 @@
     font-weight: bold;
 }
 
-.dia_clube {
+.dia1_clube {
     grid-area: dia_clube;
     background-color: aliceblue;
     display: flex;
@@ -264,7 +264,7 @@
     justify-content: center;
 }
 
-.dia_clube p {
+.dia1_clube p {
     padding: 5px;
     margin: 0 auto;
     font-size: 20px;
