@@ -1,0 +1,76 @@
+.Idade_clube {
+    grid-area: Idade_clube;
+    background-color: orange;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    border: 1px solid white;
+}
+
+.Idade_clube p {
+    padding: 5px;
+    margin: 0 auto;
+    font-size: 50px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+#tabelaHorarios {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabelaHorarios {
+    width: 500px;
+    height: auto;
+    padding-bottom: 25px;
+}
+
+.turnoManha > td {
+    border: 1px solid white;
+    background-color: #033780;
+    height: 65px;
+}
+
+.turnoTarde > td {
+    border: 1px solid white;
+    background-color: #033780;
+    height: 65px;
+}
+
+
+.td1 {
+    width: 33.33%;
+    background-color: aliceblue;
+    border: 1px solid white;
+    height: 65px;
+    font-size: 20px;
+    color: #033780;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.td2 {
+    background-color: aliceblue;
+    border: 1px solid white;
+    height: 65px;
+    font-size: 20px;
+    color: #033780;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.borda-arredondada1 {
+    border: 0px;
+    border-radius: 0px 0px 0px 10px;
+
+}
+
+.borda-arredondada2 {
+    border-radius: 0px 0px 10px 0px;
+}
