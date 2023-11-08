@@ -8,8 +8,9 @@ import equipe from './equipe'
 import duvidas from './duvidas'
 import horarioPreClube from './horarioPreClube'
 import horarioClube from './horarioClube'
+import laboratorios from './laboratorios'
 
-export const schemaTypes = [metodos, dados, certificado, premio, listaPremios, preClub, equipe, duvidas, horarioPreClube, horarioClube]
+export const schemaTypes = [metodos, dados, certificado, premio, listaPremios, preClub, equipe, duvidas, horarioPreClube, horarioClube, laboratorios]
 
 
 
