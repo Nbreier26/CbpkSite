@@ -8,7 +8,6 @@ fetch(apiUrl_horarios)
         return response.json();
     })
     .then(data => {
-        console.log(data.result[0])
         const result = data.result;
         const horario = result[0];
 
@@ -26,18 +25,23 @@ fetch(apiUrl_horarios)
         const diaSemana = horario.diasDaSemana;
         const tbody = document.getElementById('tbody');
 
-        for (let i = 0; i < turma.length; i++) {
+        turma.forEach(turmaItem => {
             const TrLista = document.createElement('tr');
+        
             const turmaTd = document.createElement('td');
-            turmaTd.classList.add('td1');
-            turmaTd.innerText = turma[i];
-            TrLista.appendChild(turmaTd);
+            turmaTd.classList.add('td2');
+            turmaTd.innerText = turmaItem;
+        
             const diasDaSemanaTd = document.createElement('td');
-            diasDaSemanaTd.classList.add('td2');
-            diasDaSemanaTd.innerText = diaSemana[i];
+            diasDaSemanaTd.classList.add('td1');
+            diasDaSemanaTd.innerText = diaSemana[turma.indexOf(turmaItem)];
+            
             TrLista.appendChild(diasDaSemanaTd);
+            TrLista.appendChild(turmaTd);
+            
+        
             tbody.appendChild(TrLista);
-        }
+        });
     })
     .catch(error => {
         console.error('Erro:', error);

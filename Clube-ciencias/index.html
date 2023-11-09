@@ -134,7 +134,8 @@
       <div class="card-reverse">
         <div class="txt">
           <p class="lab" id="lab_titulo">Ciências</p>
-          <p class="desc-lab" id="lab_ciencias">Este é um espaço onde as descobertas acontecem. Novas substâncias são sintetizadas,
+          <p class="desc-lab" id="lab_ciencias">Este é um espaço onde as descobertas acontecem. Novas substâncias são
+            sintetizadas,
             reações são exploradas e fenômenos são explicados.No laboratório de química, o conhecimento se entrelaça com
             a imaginação, a criatividade com a precisão. </p>
         </div>
@@ -287,18 +288,21 @@
                 <div class="Idade" id="Idade">
                   <p>4-8 ANOS</p>
                 </div>
-                <div class="Hora" id="Hora"></div>
-                <div class="Hora2" id="Hora2"></div>
-                <div class="Turno" id="Turno">
-                  <p>TURNO: MANHÃ</p>
+                <div class="tabelaHorarios">
+                  <table id="tabelaHorarios">
+                    <tbody id="tbodyPre">
+                      <tr class="turnoManha">
+                        <td>TURNO: MANHÃ</td>
+                        <td id="turnoManhaHoraPre"></td>
+                      </tr>
+                      <tr class="turnoTarde">
+                        <td>TURNO: TARDE</td>
+                        <td id="turnoTardeHoraPre"></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <div class="Turno2" id="Turno2">
-                  <p>TURNO: TARDE</p>
-                </div>
-                <div class="Idade2" id="Idade2"></div>
-                <div class="Idade3" id="Idade3"></div>
-                <div class="Dia" id="Dia"></div>
-                <div class="Dia2" id="Dia2"></div>
+
               </div>
             </div>
 
@@ -326,20 +330,20 @@
                   <div class="Idade_clube" id="Idade_clube">
                     <p>9-17 ANOS</p>
                   </div>
-                  <div class="tabelaHorarios">
+                  <div class="tabelaHorariosPre">
                     <table id="tabelaHorarios">
-                        <tbody id="tbody">
-                            <tr class="turnoManha">
-                                <td></td>
-                                <td id="turnoManhaHora"></td>
-                            </tr>
-                            <tr class="turnoTarde">
-                                <td></td>
-                                <td id="turnoTardeHora"></td>
-                            </tr>
-                        </tbody>
+                      <tbody id="tbody">
+                        <tr class="turnoManha">
+                          <td>TURNO: MANHÃ</td>
+                          <td id="turnoManhaHora"></td>
+                        </tr>
+                        <tr class="turnoTarde">
+                          <td>TURNO: TARDE</td>
+                          <td id="turnoTardeHora"></td>
+                        </tr>
+                      </tbody>
                     </table>
-                </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -350,6 +354,7 @@
     </div>
   </section>
   <script src="./script_dinamico/horariosClube.js"></script>
+  <script src="./script_dinamico/horariosPreClube.js"></script>
 
   <section id="comosurgiu">
     <div class="divisoria-laranja" class="row align-items-center">
