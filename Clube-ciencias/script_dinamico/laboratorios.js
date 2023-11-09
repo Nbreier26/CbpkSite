@@ -13,60 +13,38 @@ fetch(apiUrl_laboratorios)
     const laboratorios = data.result; // Suponhamos que os laboratórios estejam na propriedade 'result' dos dados.
 
     laboratorios.forEach(laboratorio => {
-      const card = document.createElement('div');
-      card.classList.add('card'); // Use 'card' instead of 'cards'
 
-      const txt = document.createElement('div');
-      txt.classList.add('txt');
+      const card = document.createElement('div');   // cria primeira div
+      const txt = document.createElement('div');    // cria segunda div
+      const lab_titulo = document.createElement('p');   // cria o primeiro p
+      const lab_desc = document.createElement('p'); // cria o segundo p
 
-      const lab_titulo = document.createElement('p');
-      lab_titulo.classList.add('lab');
-      lab_titulo.textContent = laboratorio.titulo;
+      const cardImg = document.createElement('div');    // cria div da img
+      const div1 = document.createElement('div');
+      const picture = document.createElement('picture');
+      const img = document.createElement('img');
+
+      card.classList.add('card');   // adiciona a classe card
+      txt.classList.add('txt'); // adiciona a classe txt
+      lab_titulo.classList.add('lab');  // adiciona a classe lab
+      lab_desc.classList.add('desc-lab'); // adiciona a classe desc-lab
+
+      cardImg.classList.add('card-img');    // adiciona a classe card-img
+
+      lab_titulo.innerText = laboratorio.titulo; // define o titulo 
+      lab_desc.innerText = laboratorio.descricao; // define a desc
+      img.setAttribute('src', laboratorio.imagem1); // anexa a imagem
       
       txt.appendChild(lab_titulo);
-
-      const lab_desc = document.createElement('p');
-      lab_desc.classList.add('desc-lab');
-      lab_desc.textContent = laboratorio.descricao;
-
       txt.appendChild(lab_desc);
-      
       card.appendChild(txt);
-
-      const cardImg = document.createElement('div');
-      cardImg.classList.add('card-img');
-      
-
-      const div1 = document.createElement('div');
-
-      const picture = document.createElement('picture');
-
-        // Adicione as fontes ao elemento 'picture' conforme especificado no HTML
-        const sourceMobile2 = document.createElement('source');
-        sourceMobile2.setAttribute('media', '(max-width: 388px)');
-        sourceMobile2.setAttribute('srcset', 'img-preclube/img2-mobile2.png');
-        picture.appendChild(sourceMobile2);
-
-        const sourceMobile = document.createElement('source');
-        sourceMobile.setAttribute('media', '(max-width: 630px)');
-        sourceMobile.setAttribute('srcset', 'img-preclube/img2-mobile.png');
-        picture.appendChild(sourceMobile);
-
-        const imgElement = document.createElement('img');
-        imgElement.setAttribute('src', 'img-preclube/img2.png');
-        imgElement.setAttribute('alt', '');
-        picture.appendChild(imgElement);
-
-        // Adicione o elemento 'picture' ao DOM
-        div1.appendChild(picture);
-
-        // Adicione a estrutura de imagem ao DOM
-        cardImg.appendChild(div1);
-
-        // Adicione cardImg ao card
-        card.appendChild(cardImg);
+      parentElement.appendChild(picture);
+      div1.appendChild(img);
+      cardImg.appendChild(div1);      
+      card.appendChild(cardImg);
 
       document.querySelector('.cards').appendChild(card);
+
     });
   })
   .catch(error => {
