@@ -8,7 +8,7 @@ fetch(apiUrl_laboratorios)
         return response.json();
     })
     .then(data => {
-        const laboratorios = data.result; // Suponhamos que os laboratórios estejam na propriedade 'result' dos dados.
+        const laboratorios = data.result; 
 
         // Loop através dos laboratórios e exiba as informações desejadas.
         laboratorios.forEach(laboratorio => {
