@@ -8,6 +8,7 @@ fetch(apiUrl_horarios)
         return response.json();
     })
     .then(data => {
+        console.log(data.result[0])
         const result = data.result;
         const horario = result[0];
 
