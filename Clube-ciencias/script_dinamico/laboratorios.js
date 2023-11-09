@@ -21,35 +21,37 @@ fetch(apiUrl_laboratorios)
 
       const lab_titulo = document.createElement('p');
       lab_titulo.classList.add('lab');
-      lab_titulo.textContent = laboratorios.titulo;
+      lab_titulo.textContent = laboratorio.titulo;
+      
+      txt.appendChild(lab_titulo);
 
       const lab_desc = document.createElement('p');
       lab_desc.classList.add('desc-lab');
       lab_desc.textContent = laboratorio.descricao;
 
-      txt.appendChild(lab_titulo);
       txt.appendChild(lab_desc);
+      
       card.appendChild(txt);
 
       const cardImg = document.createElement('div');
       cardImg.classList.add('card-img');
+      
 
       const div1 = document.createElement('div');
-      const div2 = document.createElement('div');
+
+      const picture = document.createElement('picture');
+      parentElement.appendChild(picture);
 
       const img = document.createElement('img');
       img.setAttribute('src', laboratorio.imagem1);
 
-      const img1 = document.createElement('img');
-      img1.setAttribute('src', laboratorio.imagem2);
-
+      
       div1.appendChild(img);
-      div2.appendChild(img1);
+      
 
       cardImg.appendChild(div1);
-      cardImg.appendChild(div2);
-
-      card.appendChild(cardImg);
+      
+    //   card.appendChild(cardImg);
 
       document.querySelector('.cards').appendChild(card);
     });
