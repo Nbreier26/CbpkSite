@@ -2,8 +2,7 @@
 var dados = [
     { nome: 'João', idade: 25 },
     { nome: 'Maria', idade: 30 },
-    { nome: 'Pedro', idade: 22 },
-    { nome: 'Pedro', idade: 22 },
+    
     
 ];
 
@@ -13,13 +12,13 @@ function criarTabela() {
     var tbody = tabela.getElementsByTagName('tbody')[0];
 
     dados.forEach(function(objeto) {
-        var linha = document.createElement('tr');
+        const linha = document.createElement('tr');
     
-        var diaSemana = document.createElement('td');
+        const diaSemana = document.createElement('td');
         diaSemana.textContent = objeto.nome;
         diaSemana.classList.add('td1');
     
-        var colunaIdade = document.createElement('td');
+        const colunaIdade = document.createElement('td');
         colunaIdade.textContent = objeto.idade;
         colunaIdade.classList.add('td2');
     
@@ -28,11 +27,6 @@ function criarTabela() {
     
         tbody.appendChild(linha);
 
-        // Adiciona uma borda arredondada à última célula
-        if (dados.indexOf(objeto) === dados.length - 1) {
-            diaSemana.classList.add('borda-arredondada1');
-            colunaIdade.classList.add('borda-arredondada2');
-        }
     });
 }
 

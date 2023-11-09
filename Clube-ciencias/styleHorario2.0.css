@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 500px;
+    width: 450px;
     border: 1px solid white;
 }
 
@@ -20,32 +20,42 @@
 
 #tabelaHorarios {
     width: 100%;
-    border-collapse: collapse;
+    
 }
 
 .tabelaHorarios {
-    width: 500px;
+    width: 450px;
     height: auto;
-    padding-bottom: 25px;
 }
+
+.caixa_texto_vantagens{
+    padding-bottom: 15px;
+}
+
+
 
 .turnoManha > td {
     border: 1px solid white;
     background-color: #033780;
     height: 65px;
+    text-align: center;
+    color: white;
 }
 
 .turnoTarde > td {
     border: 1px solid white;
     background-color: #033780;
     height: 65px;
+    text-align: center;
+    color: white;
+    
 }
 
 
 .td1 {
+    border: 1px solid white;
     width: 33.33%;
     background-color: aliceblue;
-    border: 1px solid white;
     height: 65px;
     font-size: 20px;
     color: #033780;
@@ -55,8 +65,8 @@
 }
 
 .td2 {
-    background-color: aliceblue;
     border: 1px solid white;
+    background-color: aliceblue;
     height: 65px;
     font-size: 20px;
     color: #033780;
@@ -65,12 +75,3 @@
     text-align: center;
 }
 
-.borda-arredondada1 {
-    border: 0px;
-    border-radius: 0px 0px 0px 10px;
-
-}
-
-.borda-arredondada2 {
-    border-radius: 0px 0px 10px 0px;
-}
