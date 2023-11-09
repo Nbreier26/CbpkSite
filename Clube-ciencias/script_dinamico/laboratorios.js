@@ -10,7 +10,6 @@ fetch(apiUrl_laboratorios)
   .then(data => {
     const laboratorios = data.result; // Suponhamos que os laboratórios estejam na propriedade 'result' dos dados.
 
-    // Loop através dos laboratórios e exiba as informações desejadas.
     laboratorios.forEach(laboratorio => {
       const card = document.createElement('div');
       card.classList.add('card'); // Use 'card' instead of 'cards'
