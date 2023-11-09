@@ -40,18 +40,31 @@ fetch(apiUrl_laboratorios)
       const div1 = document.createElement('div');
 
       const picture = document.createElement('picture');
-      parentElement.appendChild(picture);
 
-      const img = document.createElement('img');
-      img.setAttribute('src', laboratorio.imagem1);
+        // Adicione as fontes ao elemento 'picture' conforme especificado no HTML
+        const sourceMobile2 = document.createElement('source');
+        sourceMobile2.setAttribute('media', '(max-width: 388px)');
+        sourceMobile2.setAttribute('srcset', 'img-preclube/img2-mobile2.png');
+        picture.appendChild(sourceMobile2);
 
-      
-      div1.appendChild(img);
-      
+        const sourceMobile = document.createElement('source');
+        sourceMobile.setAttribute('media', '(max-width: 630px)');
+        sourceMobile.setAttribute('srcset', 'img-preclube/img2-mobile.png');
+        picture.appendChild(sourceMobile);
 
-      cardImg.appendChild(div1);
-      
-    //   card.appendChild(cardImg);
+        const imgElement = document.createElement('img');
+        imgElement.setAttribute('src', 'img-preclube/img2.png');
+        imgElement.setAttribute('alt', '');
+        picture.appendChild(imgElement);
+
+        // Adicione o elemento 'picture' ao DOM
+        div1.appendChild(picture);
+
+        // Adicione a estrutura de imagem ao DOM
+        cardImg.appendChild(div1);
+
+        // Adicione cardImg ao card
+        card.appendChild(cardImg);
 
       document.querySelector('.cards').appendChild(card);
     });
