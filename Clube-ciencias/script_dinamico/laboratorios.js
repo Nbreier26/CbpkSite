@@ -21,7 +21,7 @@ fetch(apiUrl_laboratorios)
 
       const lab_titulo = document.createElement('p');
       lab_titulo.classList.add('lab');
-      lab_titulo.textContent = laboratorio.titulo;
+      lab_titulo.textContent = laboratorios.titulo;
 
       const lab_desc = document.createElement('p');
       lab_desc.classList.add('desc-lab');
