@@ -41,9 +41,6 @@ fetch(apiUrl_equipe)
     
         
         section.appendChild(divSep);
-
-       
-
       }
     });
 
