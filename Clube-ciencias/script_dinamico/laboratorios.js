@@ -37,24 +37,25 @@ fetch(apiUrl_laboratorios)
             const div2 = document.createElement('div');
 
             const img = document.createElement('img');
-            img.setAttribute('src', 'img-preclube/img2.png');
+            img.setAttribute('src', laboratorio.imagem1); 
 
             const img1 = document.createElement('img');
-            img.setAttribute('src', 'img-preclube/img1.png');
+            img1.setAttribute('src', laboratorio.imagem2); 
 
-            const img2 = document.createElement('img');
-            img.setAttribute('src', 'img-preclube/img3.png');
+            
 
-            const picture = document.createElement('picture');
+            div1.appendChild(img);
+            div2.appendChild(img1);
 
-            // Adiciona os elementos no html
-            cardImg.appendChild(div1);  
-                cardImg.appendChild(div2);
-                  picture.appendChild(img); 
-              
+            cardImg.appendChild(div1);
+            cardImg.appendChild(div2);
 
+            card.appendChild(cardImg);
+
+            
+            document.querySelector('.cards').appendChild(card);
         });
     })
     .catch(error => {
-        console.error('Erro:', error);
+        console.error('Erro ao buscar dados do Sanity:', error.message);
     });
