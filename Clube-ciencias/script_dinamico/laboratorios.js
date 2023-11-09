@@ -14,36 +14,48 @@ fetch(apiUrl_laboratorios)
 
     laboratorios.forEach(laboratorio => {
 
-      const card = document.createElement('div');   // cria primeira div
-      const txt = document.createElement('div');    // cria segunda div
-      const lab_titulo = document.createElement('p');   // cria o primeiro p
-      const lab_desc = document.createElement('p'); // cria o segundo p
-
-      const cardImg = document.createElement('div');    // cria div da img
-      const div1 = document.createElement('div');
-      const picture = document.createElement('picture');
-      const img = document.createElement('img');
-
-      card.classList.add('card');   // adiciona a classe card
-      txt.classList.add('txt'); // adiciona a classe txt
-      lab_titulo.classList.add('lab');  // adiciona a classe lab
-      lab_desc.classList.add('desc-lab'); // adiciona a classe desc-lab
-
-      cardImg.classList.add('card-img');    // adiciona a classe card-img
-
-      lab_titulo.innerText = laboratorio.titulo; // define o titulo 
-      lab_desc.innerText = laboratorio.descricao; // define a desc
-      img.setAttribute('src', laboratorio.imagem1); // anexa a imagem
+        const card = document.createElement('div');
+        const txt = document.createElement('div');
+        const lab_titulo = document.createElement('p');
+        const lab_desc = document.createElement('p');
       
-      txt.appendChild(lab_titulo);
-      txt.appendChild(lab_desc);
-      card.appendChild(txt);
-      parentElement.appendChild(picture);
-      div1.appendChild(img);
-      cardImg.appendChild(div1);      
-      card.appendChild(cardImg);
-
-      document.querySelector('.cards').appendChild(card);
+        const cardImg = document.createElement('div');
+        const div1 = document.createElement('div');
+        const picture = document.createElement('picture');
+        const img = document.createElement('img');
+      
+        card.classList.add('card');
+        txt.classList.add('txt');
+        lab_titulo.classList.add('lab');
+        lab_desc.classList.add('desc-lab');
+      
+        cardImg.classList.add('card-img');
+      
+        lab_titulo.innerText = laboratorio.titulo;
+        lab_desc.innerText = laboratorio.descricao;
+        img.setAttribute('src', laboratorio.imagem1);
+      
+        txt.appendChild(lab_titulo);
+        txt.appendChild(lab_desc);
+        card.appendChild(txt);
+      
+        const sourceMobile2 = document.createElement('source');
+        sourceMobile2.setAttribute('media', '(max-width: 388px)');
+        sourceMobile2.setAttribute('srcset', laboratorio.imagemMobile2);
+      
+        const sourceMobile = document.createElement('source');
+        sourceMobile.setAttribute('media', '(max-width: 630px)');
+        sourceMobile.setAttribute('srcset', laboratorio.imagemMobile);
+      
+        picture.appendChild(sourceMobile2);
+        picture.appendChild(sourceMobile);
+        picture.appendChild(img);
+      
+        cardImg.appendChild(picture);
+      
+        card.appendChild(cardImg);
+      
+        document.querySelector('.cards').appendChild(card);
 
     });
   })
