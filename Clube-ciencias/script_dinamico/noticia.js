@@ -1,4 +1,4 @@
-const apiUrl_noticia = 'https://ywf90txg.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27noticia%27+%26%26+ativo+%3D%3D+true+%5D'
+const apiUrl_noticia = 'https://ywf90txg.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27noticia%27+%26%26+ativo+%3D%3D+true+%5D%7B%0A+++%27imageUrl%27%3A+imagem.asset-%3Eurl%2C%0A+++%27imageMobileUrl%27+%3A+imagemMobile.asset-%3Eurl%2C%0A+++++...%7D'
 
 fetch(apiUrl_noticia)
     .then(response => {
