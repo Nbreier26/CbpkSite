@@ -9,21 +9,21 @@ fetch(apiUrl_laboratorios)
   })
   .then(data => {
 
-    const result = data.result; // Suponhamos que os laboratórios estejam na propriedade 'result' dos dados.
+    const result = data.result; 
     
     result.forEach((laboratorio, index) => {
 
       const cards = document.getElementById('cards')
-      const card = document.createElement('div');   // cria primeira div
-      const txt = document.createElement('div');    // cria segunda div
-      const lab_titulo = document.createElement('p');   // cria o primeiro p
-      const lab_desc = document.createElement('p'); // cria o segundo p
+      const card = document.createElement('div');   
+      const txt = document.createElement('div');    
+      const lab_titulo = document.createElement('p');   
+      const lab_desc = document.createElement('p'); 
 
       const cardNone = document.createElement('div')
 
 
 
-      const cardImg = document.createElement('div');    // cria div da img
+      const cardImg = document.createElement('div');    
       const div1 = document.createElement('div');
       const picture = document.createElement('picture');
       const img = document.createElement('img');
@@ -54,10 +54,10 @@ fetch(apiUrl_laboratorios)
       }
       // adiciona a classe card-img
 
-      lab_titulo.innerText = laboratorio.titulo; // define o titulo 
-      lab_desc.innerText = laboratorio.descricao; // define a desc
+      lab_titulo.innerText = laboratorio.titulo; 
+      lab_desc.innerText = laboratorio.descricao; 
       const labimg = laboratorio.imageUrl
-      img.setAttribute('src', labimg); // anexa a imagem
+      img.setAttribute('src', labimg); 
       img.style.maxWidth = '500px';
 
       txt.appendChild(lab_titulo);

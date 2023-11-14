@@ -14,6 +14,7 @@ fetch(apiUrl_duvidas)
         const result = data.result;
 
         result.forEach((duvidas, index) => {
+            
                 const p = document.createElement("p");
                 const frequente = document.getElementById('frequente');
                 const divCollapse = document.createElement("div");
