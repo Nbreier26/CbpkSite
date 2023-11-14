@@ -306,6 +306,7 @@ p{
 .card-img img{
     border-radius: 15px;
     box-shadow: #000000b4 1px 5px 5px;
+    max-width: 630px;
 }
 
 /* vantagens */
