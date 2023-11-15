@@ -1,5 +1,5 @@
 
-const apiUrl_certifcado = 'https://ywf90txg.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27certificados%27%5D';
+const apiUrl_certifcado = 'https://ywf90txg.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27certificados%27+%26%26+ativo+%3D%3D+true%5D';
 
 
 fetch(apiUrl_certifcado)
@@ -16,13 +16,11 @@ fetch(apiUrl_certifcado)
         const result = data.result;
 
         result.forEach(certificado => {
-            if (certificado.ativo) {
                 const quadrado2 = document.getElementById('quadrado2');
                 const p = document.createElement('p');
                 p.classList.add('vant-txt');
                 p.innerText = certificado.descricao;
                 quadrado2.appendChild(p);
-            }
         });
 
     })

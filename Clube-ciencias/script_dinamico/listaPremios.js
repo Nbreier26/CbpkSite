@@ -1,4 +1,4 @@
-const apiUrl_listaPremio ='https://ywf90txg.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22listaPremios%22%5D%7B%0A++%22imageUrl%22%3A+imagem.asset-%3Eurl%2C%0A++...%0A%7D%0A%0A'
+const apiUrl_listaPremio ='https://ywf90txg.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22listaPremios%22+%26%26+ativo+%3D%3D+true%5D%7B%0A++%22imageUrl%22%3A+imagem.asset-%3Eurl%2C%0A++...%0A%7D%0A%0A'
 
 fetch(apiUrl_listaPremio)
     .then(response => {
@@ -14,7 +14,6 @@ fetch(apiUrl_listaPremio)
         const result = data.result;
 
         result.forEach(listaPremio => {
-            if (listaPremio.ativo) {
                 const divPremios = document.getElementById('div-premios');
                 
                 const premios = document.createElement('div');
@@ -28,7 +27,6 @@ fetch(apiUrl_listaPremio)
                 premios.appendChild(img);
                 premios.appendChild(p);
                 divPremios.appendChild(premios);
-            }
         });
 
     })

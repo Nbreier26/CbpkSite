@@ -1,4 +1,4 @@
-const apiUrl_equipe = 'https://ywf90txg.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27equipe%27%5D+%7C+order%28_createdAt+asc%29%7B%0A++%22imageUrl%22%3A+Foto.asset-%3Eurl%2C%0A++%0A++...%0A%7D';
+const apiUrl_equipe = 'https://ywf90txg.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27equipe%27+%26%26+ativo+%3D%3D+true%5D+%7C+order%28_createdAt+asc%29%7B%0A++%22imageUrl%22%3A+Foto.asset-%3Eurl%2C%0A++%0A++...%0A%7D';
 
 fetch(apiUrl_equipe)
   .then(response => {
@@ -13,8 +13,6 @@ fetch(apiUrl_equipe)
     const result = data.result;
 
     result.forEach(equipe => {
-      if (equipe.ativo) {
-        
         const divSep = document.getElementById('sep');
         const divProfs = document.createElement('div');
         const divNome = document.createElement('div');
@@ -40,7 +38,7 @@ fetch(apiUrl_equipe)
         
         section.appendChild(divSep);
       }
-    });
+    );
 
   })
   .catch(error => {
