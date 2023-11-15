@@ -6,7 +6,6 @@ fetch(apiUrl_equipe)
       throw new Error(`Erro na requisição: ${response.statusText}`);
     }
 
-    // Converte a resposta para JSON
     return response.json();
   })
   .then(data => {
@@ -34,14 +33,12 @@ fetch(apiUrl_equipe)
         divProfs.appendChild(avatar);
         divProfs.appendChild(divNome);
         divSep.appendChild(divProfs);
-    
-        
+
         section.appendChild(divSep);
       }
     );
 
   })
   .catch(error => {
-    // Trata erros que podem ocorrer durante a requisição
     console.error('Erro:', error);
   });

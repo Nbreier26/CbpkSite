@@ -4,12 +4,9 @@ const apiUrl_metodo = 'https://ywf90txg.api.sanity.io/v2021-10-21/data/query/pro
 
 fetch(apiUrl_metodo)
   .then(response => {
-    // Verifica se a resposta da requisição foi bem-sucedida (código 200)
     if (!response.ok) {
       throw new Error(`Erro na requisição: ${response.statusText}`);
     }
-
-    // Converte a resposta para JSON
     return response.json();
   })
   .then(data => {
@@ -25,6 +22,5 @@ fetch(apiUrl_metodo)
 
   })
   .catch(error => {
-    // Trata erros que podem ocorrer durante a requisição
     console.error('Erro:', error);
   });
