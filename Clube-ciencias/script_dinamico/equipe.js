@@ -12,6 +12,7 @@ fetch(apiUrl_equipe)
     const result = data.result;
 
     result.forEach(equipe => {
+      
         const divSep = document.getElementById('sep');
         const divProfs = document.createElement('div');
         const divNome = document.createElement('div');

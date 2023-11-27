@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,32 +9,35 @@
     <link rel="shortcut icon" href="img/fguetee.png" type="image/x-icon">
     <title>Noticias</title>
     <style>
-        *{
+        * {
             margin: 0px;
             padding: 0px;
             border: 0px;
             box-sizing: border-box;
         }
 
-        body{
+        body {
             background-image: linear-gradient(#000000, #033780, #467DEB);
             height: auto;
             background-repeat: no-repeat;
-            
+
         }
-        h1{
+
+        h1 {
             color: white;
             margin-left: 30px;
             font-family: inter;
         }
-        .divisoria-laranja{
+
+        .divisoria-laranja {
             background-color: #FC6335;
             width: 85%;
             border-radius: 0px 15px 15px 0px;
             display: flex;
             margin-top: 30px;
         }
-        .voltar{
+
+        .voltar {
             background-color: #FC6335;
             padding: 10px;
             margin-top: 30px;
@@ -42,21 +46,23 @@
             width: fit-content;
             cursor: pointer;
         }
-        .voltar a{
+
+        .voltar a {
             text-decoration: none;
             color: white;
             font-family: inter;
         }
 
-        .div-premios{
+        .div-premios {
             width: 100%;
-            
+
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-           
+
         }
-        .premios{
+
+        .premios {
             height: 500px;
             border: 1px solid black;
             width: 300px;
@@ -64,35 +70,40 @@
             background-color: white;
             border-radius: 20px;
             border: 0px;
-            
+
             box-shadow: 5px 5px 5px black;
         }
-        .premios:hover{
+
+        .premios:hover {
             transition: box-shadow .5s;
             box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.349);
-            
+
         }
-        .premios > img{
+
+        .premios>img {
             border-radius: 20px 20px 0px 0px;
             width: 100%;
         }
-        .premios > p{
+
+        .premios>p {
             font-family: inter;
             font-size: 15px;
             padding: 10px;
         }
     </style>
 </head>
+
 <body>
     <div class="divisoria-laranja">
         <h1>Premios</h1>
     </div>
-        <div class="voltar" onclick="location.href='index.html#vantagens'">
-        <a  href="index.html#vantagens"> <- Voltar</a>  
+    <div class="voltar" onclick="location.href='index.html#vantagens'">
+        <a href="index.html#vantagens"> <- Voltar</a>
     </div>
 
     <div class="div-premios" id="div-premios">
     </div>
     <script src="./script_dinamico/listaPremios.js"></script>
 </body>
+
 </html>

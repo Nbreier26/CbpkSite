@@ -16,10 +16,13 @@ fetch(apiUrl_certifcado)
         const result = data.result;
 
         result.forEach(certificado => {
+            
                 const quadrado2 = document.getElementById('quadrado2');
                 const p = document.createElement('p');
+                
                 p.classList.add('vant-txt');
                 p.innerText = certificado.descricao;
+
                 quadrado2.appendChild(p);
         });
 

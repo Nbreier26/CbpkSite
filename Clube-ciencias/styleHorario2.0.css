@@ -92,3 +92,38 @@
     text-align: center;
 }
 
+@media (max-width: 600px) {
+
+    .Idade{
+    width: 350px;
+}
+
+.Idade p{
+    font-size: 45px;
+}
+
+.Idade_clube{
+    width: 350px;
+}
+
+.Idade_clube p{
+    font-size: 45px;
+}
+
+.tabelaHorarios {
+    width: 350px;
+    
+}
+
+.td1{
+    font-size: 15px;
+}
+
+.td2{
+    font-size: 15px;
+}
+
+
+
+}
+
