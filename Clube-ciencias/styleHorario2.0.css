@@ -95,7 +95,7 @@
 @media (max-width: 600px) {
 
     .Idade{
-    width: 350px;
+    width: 250px;
 }
 
 .Idade p{
@@ -103,7 +103,7 @@
 }
 
 .Idade_clube{
-    width: 350px;
+    width: 250px;
 }
 
 .Idade_clube p{
@@ -111,7 +111,7 @@
 }
 
 .tabelaHorarios {
-    width: 350px;
+    width: 250px;
     
 }
 
